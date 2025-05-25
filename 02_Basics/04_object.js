@@ -1,39 +1,44 @@
-//const tinderUser = new Object()
-const tinderUser = {}
+// Creating a new object using object literal syntax
+const tinderUser = {};
 
-tinderUser. id = "123abc"
-tinderUser. name = "Sammy"
-tinderUser. isLoggedIn = "False"
+// Adding properties to the object
+tinderUser.id = "123abc";
+tinderUser.name = "Sammy";
+tinderUser.isLoggedIn = false; // use boolean instead of string
 
-
-
-//console.log(tinderUser);
-
+// Nested object
 const regularUser = {
   email: "some@gmail.com",
   fullname: {
     userfullname: {
       firstname: "hitesh",
-      lastname: "choudhary" // fixed typo from latname to lastname
+      lastname: "choudhary"
     }
   }
 };
 
-// console.log(regularUser.fullname.userfullname.firstname); // optional
-// console.log(regularUser.fullname.userfullname.lastname);  // optional
+// Optional logs:
+// console.log(regularUser.fullname.userfullname.firstname);
+// console.log(regularUser.fullname.userfullname.lastname);
 
-// // Or if you want to log the full name:
-// console.log(
-//   `${regularUser.fullname.userfullname.firstname} ${regularUser.fullname.userfullname.lastname}`
-// );
-
+// Full name log:
+// console.log(`${regularUser.fullname.userfullname.firstname} ${regularUser.fullname.userfullname.lastname}`);
 // console.log(regularUser.fullname);
 
+// Object merging
+const obj1 = {1: "a", 2: "b"};
+const obj2 = {3: "a", 4: "b"};
+const obj4 = {5: "a", 6: "b"};
 
-const obj1 = {1:"a", 2:"b"}
-const obj2 = {3:"a", 4:"b"}
-const obj4 = {5:"a", 6:"b"}
+// Using spread syntax for merging
+const obj3 = {...obj1, ...obj2, ...obj4}; // fixed syntax
 
-// const obj3 = Object.assign({},obj1, obj2, obj4)
-const obj3 {...obj1, ...obj2}
-console.log(obj3);
+// Outputting tinderUser object and its keys and values
+console.log(tinderUser);
+console.log(Object.keys(tinderUser));
+console.log(Object.values(tinderUser));
+console.log(Object.entries(tinderUser));
+
+
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+console.log(tinderUser.hasOwnProperty('isLogged'));
