@@ -34,11 +34,26 @@ const obj4 = {5: "a", 6: "b"};
 const obj3 = {...obj1, ...obj2, ...obj4}; // fixed syntax
 
 // Outputting tinderUser object and its keys and values
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
-console.log(tinderUser.hasOwnProperty('isLogged'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLogged'));
+
+
+
+//----------------------------
+
+const course = { 
+   coursename: "jas in hindhi",
+   price: "999",
+   courseInstructor: "hitesh"
+  
+}
+
+const {courseInstructor: instructor} = course
+
+console.log(instructor);
